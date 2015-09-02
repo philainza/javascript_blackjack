@@ -216,8 +216,9 @@ var showPlayAgainButton = function() {
   playAgainButton.textContent = "Play Again?";
   playAgainButton.setAttribute("id", "play-again-button"); 
   playAgainButton.setAttribute("class", "button");
-  playAgainButton.setAttribute("href", "http://port-80-9sutbgvojx.treehouse-app.com/");
+  playAgainButton.setAttribute("onclick", "window.location.reload()");
   gameplayButtons.appendChild(playAgainButton);
+  return playAgainButton;
 };
 
 var dealerTotal = function() {
@@ -395,4 +396,5 @@ var deal = function() {
 
 
 dealButton.onclick = deal;
+playAgainButton.onclick = location.reload();
 
